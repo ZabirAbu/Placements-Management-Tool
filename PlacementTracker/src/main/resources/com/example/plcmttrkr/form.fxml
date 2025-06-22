@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.plcmttrkr.FormController">
+   <children>
+      <AnchorPane fx:id="dragBar" layoutX="200.0" onMouseDragged="#dragBarOnMovementAction" onMousePressed="#dragBarOnAction" prefHeight="40.0" prefWidth="900.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="minimiseButton" layoutX="820.0" mnemonicParsing="false" onAction="#minimiseButtonOnAction" prefHeight="40.0" prefWidth="40.0" stylesheets="@styles.css" text="-" textFill="#0000007a" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Rockwell Extra Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelButton" layoutX="737.0" layoutY="4.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="40.0" prefWidth="40.0" stylesheets="@styles.css" text="X" textFill="#0000007a" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+      <AnchorPane prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #7663FC;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="logoutButton" layoutY="534.0" mnemonicParsing="false" onAction="#logoutButtonOnAction" prefHeight="40.0" prefWidth="200.0" styleClass="button2" stylesheets="@styles.css" text="Logout" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="75.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo_cropped.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="homeButton" layoutX="3.0" layoutY="176.0" mnemonicParsing="false" onAction="#homeButtonOnAction" prefHeight="40.0" prefWidth="200.0" styleClass="button2" stylesheets="@styles.css" text="Home" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="3.0" layoutY="216.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #4a31fb;" text="Form" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="helpButton" layoutY="256.0" mnemonicParsing="false" onAction="#helpButtonOnAction" prefHeight="40.0" prefWidth="200.0" styleClass="button2" stylesheets="@styles.css" text="Help" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+      <AnchorPane layoutX="200.0" layoutY="40.0" prefHeight="560.0" prefWidth="900.0">
+         <children>
+            <AnchorPane layoutX="19.0" layoutY="14.0" prefHeight="80.0" prefWidth="862.0" style="-fx-background-color: #e8e8e8;" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="19.0">
+               <children>
+                  <Label fx:id="userTypeLabel" prefHeight="20.0" prefWidth="220.0" text="Form - Student" AnchorPane.leftAnchor="43.0" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Please fill out the form below!" AnchorPane.leftAnchor="43.0" AnchorPane.topAnchor="40.0">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ScrollPane fx:id="studentScrollPane" layoutX="19.0" layoutY="119.0" prefHeight="5000.0" prefWidth="862.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="119.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="4823.0" prefWidth="862.0" style="-fx-background-color: #e8e8e8;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Placement Authorisation Request Form" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="41.0" prefHeight="40.0" prefWidth="825.0" text="This form is to be completed by a University of Leicester student to notify the University of Leicester about a placement offer. By submitting this form, you request authorisation to have the role form part of your degree programme. We will use this form to assess the placement role you have been offered." wrapText="true" AnchorPane.bottomAnchor="3919.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="41.0" />
+                        <Label layoutX="14.0" layoutY="81.0" text="Your Responsibilities as a Placement Student" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="469.2" AnchorPane.topAnchor="81.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="108.0" prefHeight="20.0" prefWidth="548.0" text="By submitting this form, you confirm that you will meet the following requirements for your placement:" wrapText="true" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="300.4" AnchorPane.topAnchor="108.0" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="128.0" prefHeight="53.0" prefWidth="820.0" text="1. Act professionally and responsibly, both in your studies and on placement, as well as, if required, during your meeting probation periods. You must conduct yourselves accordingly with due regard to the University Senate Regulations, the Placement Provider, and the laws and conventions of the country in which you are undertaking your placement." wrapText="true" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="28.399999999999977" AnchorPane.topAnchor="128.0" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="184.0" prefHeight="40.0" prefWidth="820.0" text="2. Adhere to attendance requirements and working hours stipulated by the University and on your visa. This involves not working more than the hours stated, either inside or outside of the University." wrapText="true" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="28.399999999999977" AnchorPane.topAnchor="184.0" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="224.0" prefHeight="40.0" prefWidth="820.0" text="3. If your placement involves is overseas, you must register for insurance under the Group Personal Accident and Travel Policy arranged by the University. To register, please read through the guidance on the Overseas Travel SharePoint page and complete the Student Travel Insurance Request." wrapText="true" />
+                        <Hyperlink fx:id="studFormHyperlink1" layoutX="14.0" layoutY="264.0" onAction="#goToUrl1" text="https://uniofleicester.sharepoint.com/sites/Insurance/SitePages/Staff-Student-Overseas-Travel.aspx" />
+                        <Label alignment="TOP_LEFT" layoutX="37.0" layoutY="288.0" prefHeight="40.0" prefWidth="797.0" text="a. If your employer requires you to travel (either overseas or within the same country) as part of the job description, it is the employer responsibility to ensure the travel is risk assessed and insured." wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="328.0" prefHeight="20.0" prefWidth="820.0" text="4. Inform the University if you have any queries or concerns about your placement or Placement Provider." wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="348.0" prefHeight="20.0" prefWidth="820.0" text="5. Update the University immediately if any of your placement details change." wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="368.0" prefHeight="20.0" prefWidth="820.0" text="6. Contact the University and the Placement Provider if you require special adjustments to be made in order to undertake the placement" wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="388.0" prefHeight="20.0" prefWidth="820.0" text="7. Notify the University if you are absent from your placement for more than 5 days in a row." wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="408.0" prefHeight="20.0" prefWidth="820.0" text="8. Check your university email account regularly for communications from the University." wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="428.0" prefHeight="20.0" prefWidth="820.0" text="9. Complete any tasks and assessment throughout the duration of the placement within the deadlines specified." wrapText="true" />
+                        <Label layoutX="14.0" layoutY="448.0" text="Getting your placement authorised">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="475.0" prefHeight="40.0" prefWidth="820.0" text="Once you submit this form, the University will ask your Placement Provider to provide further information, and assess your placement. Most placements are approved. However, common reasons that a placement might be rejected include:" wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="515.0" prefHeight="20.0" prefWidth="820.0" text="1. The Placement is unpaid and does not offer a high-quality work experience." wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="535.0" prefHeight="20.0" prefWidth="820.0" text="2. The Placement involves a high level of risk. As part of this, we consider whether an employer has insurance to cover you for accidents." wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="555.0" prefHeight="20.0" prefWidth="820.0" text="3. The Placement Provider seems illegitimate, or is operating illegally." wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="575.0" prefHeight="40.0" prefWidth="820.0" text="4. The Placement does not guarantee a high-quality learning experience. When we consider this, we will look at the role description, the placement provider, and how much remote working is planned on placement." wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="615.0" prefHeight="20.0" prefWidth="820.0" text="Please fill in every section required." wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="635.0" prefHeight="20.0" prefWidth="820.0" text="Important Note: Do not commit funds for your placement and travel arrangements until the placement and risk assessment have been approved." textFill="RED" wrapText="true" />
+                        <Label layoutX="14.0" layoutY="655.0" text="1. Student Details">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="firstNameTextField" layoutX="14.0" layoutY="705.0" prefHeight="26.0" prefWidth="341.0" />
+                        <TextField fx:id="surnameTextField" layoutX="14.0" layoutY="758.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="682.0" prefHeight="20.0" prefWidth="820.0" text="A. First Name*:" wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="738.0" prefHeight="20.0" prefWidth="820.0" text="B. Surname*" wrapText="true" />
+                        <TextField fx:id="studentNumberTextField" layoutX="14.0" layoutY="809.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="789.0" prefHeight="20.0" prefWidth="116.0" text="C. Student Number*:" wrapText="true" />
+                        <TextField fx:id="emailAddressTextField" layoutX="14.0" layoutY="873.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="853.0" prefHeight="20.0" prefWidth="820.0" text="D. Email Address*:" wrapText="true" />
+                        <TextField fx:id="programmeOfStudyTextField" layoutX="14.0" layoutY="926.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="906.0" prefHeight="20.0" prefWidth="820.0" text="E. Programme of study*:" wrapText="true" />
+                        <TextField fx:id="schoolDepartmentTextField" layoutX="14.0" layoutY="981.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="961.0" prefHeight="20.0" prefWidth="820.0" text="F. School/Department*:" wrapText="true" />
+                        <TextField fx:id="contactTelephoneNumberTextField" layoutX="14.0" layoutY="1035.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="1015.0" prefHeight="20.0" prefWidth="820.0" text="G. Contact Telephone Number*:" wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="1069.0" prefHeight="20.0" prefWidth="820.0" text="H. Are you an international student with a Student Visa*? If no, please proceed to section 2." wrapText="true" />
+                        <ChoiceBox fx:id="internationalStudentWithVisaChoiceBox" layoutX="14.0" layoutY="1089.0" prefWidth="150.0" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="1121.0" prefHeight="20.0" prefWidth="820.0" text="I. Does your Student Visa duration account for your placement? If no, please contact visas@leicester.ac.uk." wrapText="true" />
+                        <ChoiceBox fx:id="studentVisaDurationChoiceBox" layoutX="14.0" layoutY="1141.0" prefWidth="150.0" />
+                        <Label layoutX="14.0" layoutY="1164.0" text="2. Placement Provider Details">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nameOfOrgTextField" layoutX="14.0" layoutY="1211.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="1191.0" prefHeight="20.0" prefWidth="820.0" text="A. Name of Organisation*:" wrapText="true" />
+                        <TextField fx:id="addressOfPlacementTextField" layoutX="14.0" layoutY="1266.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="1246.0" prefHeight="20.0" prefWidth="820.0" text="B. Address where the placement will be based*:" wrapText="true" />
+                        <TextField fx:id="postcodeTextField" layoutX="14.0" layoutY="1321.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="1301.0" prefHeight="20.0" prefWidth="820.0" text="C. Postcode*:" wrapText="true" />
+                        <TextField fx:id="webAddressTextField" layoutX="14.0" layoutY="1376.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="1356.0" prefHeight="20.0" prefWidth="820.0" text="D. Web Address*:" wrapText="true" />
+                        <TextField fx:id="contactNameTextField" layoutX="14.0" layoutY="1429.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="1409.0" prefHeight="20.0" prefWidth="820.0" text="E. Contact Name*:" wrapText="true" />
+                        <TextField fx:id="contactJobTitleTextField" layoutX="14.0" layoutY="1482.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="1462.0" prefHeight="20.0" prefWidth="820.0" text="F. Contact Job Title*:" wrapText="true" />
+                        <TextField fx:id="contactEmailTextField" layoutX="16.0" layoutY="1536.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="1516.0" prefHeight="20.0" prefWidth="820.0" text="G. Contact Email*:" wrapText="true" />
+                        <TextField fx:id="contactPTelephoneNumberTextField" layoutX="16.0" layoutY="1589.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="1569.0" prefHeight="20.0" prefWidth="820.0" text="H. Contact Telephone Number*:" wrapText="true" />
+                        <Label layoutX="14.0" layoutY="1623.0" text="3. Placement Role Details">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="roleTitleTextField" layoutX="16.0" layoutY="1670.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="1650.0" prefHeight="20.0" prefWidth="820.0" text="A. Role Title*:" wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="1704.0" prefHeight="53.0" prefWidth="820.0" text="B. Role Start date*: (Indicate the proposed startdate or month of your placement. This information can be updated nearer the time when you have an exact date. Please Note: Your start date MUST be at least 10 working days AFTER the date you submit this form to allow the university time to process your placement authorisation request. You must not start your placement until your placement has been approved by the university." wrapText="true" />
+                        <DatePicker fx:id="roleStartDateDatePicker" layoutX="16.0" layoutY="1758.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="1791.0" prefHeight="20.0" prefWidth="820.0" text="C. Role End date*: (expected month if unknown)" wrapText="true" />
+                        <DatePicker fx:id="roleEndDateDatePicker" layoutX="16.0" layoutY="1811.0" prefHeight="26.0" prefWidth="341.0" />
+                        <TextField fx:id="workingHoursPerWeekTextField" layoutX="16.0" layoutY="1884.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="1845.0" prefHeight="40.0" prefWidth="820.0" text="D. Working hours per week*: (Please Note: The role is to be a minimum of 35 hours and maximum or 48 hours per week unless otherwise stipulated by your Student Visa.)" wrapText="true" />
+                        <TextField fx:id="lengthOfProbationTextField" layoutX="17.0" layoutY="1993.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="1919.0" prefHeight="20.0" prefWidth="820.0" text="E. Does your role include a probation period*:" wrapText="true" />
+                        <ChoiceBox fx:id="probationPeriodChoiceBox" layoutX="16.0" layoutY="1939.0" prefWidth="150.0" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="1973.0" prefHeight="20.0" prefWidth="820.0" text="If yes, please confirm length of your probation period below:" wrapText="true" />
+                        <TextField fx:id="salaryPerYearTextField" layoutX="16.0" layoutY="2048.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="2028.0" prefHeight="20.0" prefWidth="820.0" text="F. What is your salary for the placement*: (per year)" wrapText="true" />
+                        <TextField fx:id="sourceRoleTextField" layoutX="16.0" layoutY="2104.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="2084.0" prefHeight="20.0" prefWidth="820.0" text="A. How did you source this role*:" wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="2137.0" prefHeight="35.0" prefWidth="820.0" text="B. Have you informed the Placement Provider that this placement forms part of your degree programme*? If no, please inform the Placement Provider before proceeding with this form." wrapText="true" />
+                        <ChoiceBox fx:id="informedPlacementChoiceBox" layoutX="16.0" layoutY="2172.0" prefWidth="150.0" />
+                        <TextField fx:id="roleDescriptionTextField" alignment="TOP_LEFT" layoutX="16.0" layoutY="2242.0" prefHeight="78.0" prefWidth="820.0" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="2207.0" prefHeight="35.0" prefWidth="820.0" text="C. Please provide a role description for your placement*. If you do not have this, please contact the Placement Provider toreceive a Role Description before submitting this form." wrapText="true" />
+                        <Label layoutX="17.0" layoutY="2328.0" text="4. Work Factors">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="2355.0" prefHeight="20.0" prefWidth="820.0" text="A. Does this role involve working from home/remotely*: (This includes hybrid working) If yes, please answer questions 4.b and 4.c." wrapText="true" />
+                        <ChoiceBox fx:id="remoteWorkChoiceBox" layoutX="16.0" layoutY="2375.0" prefWidth="150.0" />
+                        <TextField fx:id="overviewRemoteWorkTextField" alignment="TOP_LEFT" layoutX="16.0" layoutY="2430.0" prefHeight="78.0" prefWidth="820.0" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="2410.0" prefHeight="20.0" prefWidth="820.0" text="B. Please provide an overview of how you will work remotely: This should include how often you will work remotely each week." wrapText="true" />
+                        <TextField fx:id="whyWorkHomeTextField" alignment="TOP_LEFT" layoutX="16.0" layoutY="2537.0" prefHeight="78.0" prefWidth="820.0" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="2517.0" prefHeight="20.0" prefWidth="820.0" text="C. Why does this role involve working from home:" wrapText="true" />
+                        <Label layoutX="17.0" layoutY="2622.0" text="5. Transport and Travel Factors">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="2649.0" prefHeight="20.0" prefWidth="820.0" text="A. How will you travel to and from the placement and residence*: If you do not know this, please put what you are planning to do." wrapText="true" />
+                        <ChoiceBox fx:id="travelChoiceBox" layoutX="16.0" layoutY="2669.0" prefWidth="150.0" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="2702.0" prefHeight="20.0" prefWidth="820.0" text="If Other, please state below." wrapText="true" />
+                        <TextField fx:id="travelOtherTextField" layoutX="16.0" layoutY="2722.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="2756.0" prefHeight="20.0" prefWidth="820.0" text="B. Does this role involve working at a location different to the Placement Provider’s address that you have given in section 2*?" wrapText="true" />
+                        <ChoiceBox fx:id="roleLocationDifferentChoiceBox" layoutX="16.0" layoutY="2776.0" prefWidth="150.0" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="2809.0" prefHeight="20.0" prefWidth="820.0" text="If yes, please provide details below:" wrapText="true" />
+                        <TextField fx:id="detailsDifferentLocationTextField" alignment="TOP_LEFT" layoutX="16.0" layoutY="2829.0" prefHeight="78.0" prefWidth="820.0" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="2917.0" prefHeight="54.0" prefWidth="820.0" text="C. Does your placement require travel overseas*: Please Note: If you are travelling overseas at the Placement Providers request then the university is not responsible for the travel insurance and it is your employer’s responsibility to risk assess the travel. If you are travelling overseas to attend the placement, then the responsibility is with the university." wrapText="true" />
+                        <ChoiceBox fx:id="overseasTravelRequiredChoiceBox" layoutX="16.0" layoutY="2971.0" prefWidth="150.0" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="3004.0" prefHeight="20.0" prefWidth="820.0" text="If no, please continue to Section 6." wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="3024.0" prefHeight="40.0" prefWidth="820.0" text="If yes, please follow the link below and familiarise yourself with this resource. There are several action points on that page before you travel including: Student Travel Application Form. Contact your school about having a risk assessment conducted. Global Health Insurance Card." wrapText="true" />
+                        <Hyperlink fx:id="studFormHyperlink2" layoutX="13.0" layoutY="3064.0" onAction="#goToUrl2" text="https://uniofleicester.sharepoint.com/sites/Insurance/SitePages/Staff-Student-Overseas-Travel.aspx" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="3088.0" prefHeight="20.0" prefWidth="820.0" text="D. Overseas Placement. Have you read the overseas travel guidance:" wrapText="true" />
+                        <ChoiceBox fx:id="overseasGuidanceChoiceBox" layoutX="16.0" layoutY="3108.0" prefWidth="150.0" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="3142.0" prefHeight="20.0" prefWidth="820.0" text="If no, please follow the link below and familiarise yourself with this resource. There are several action points on that page before you travel." wrapText="true" />
+                        <Hyperlink fx:id="studFormHyperlink3" layoutX="13.0" layoutY="3162.0" onAction="#goToUrl3" text="https://uniofleicester.sharepoint.com/sites/Insurance/SitePages/Staff-Student-Overseas-Travel.aspx" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="3186.0" prefHeight="35.0" prefWidth="820.0" text="E. Overseas Placement. Have you considered how you will travel to your country of work and financing this: (Please note: Have you considered whether your transport option minimises your carbon footprint?)" wrapText="true" />
+                        <ChoiceBox fx:id="overseasTravelChoiceBox" layoutX="16.0" layoutY="3222.0" prefWidth="150.0" />
+                        <Label layoutX="17.0" layoutY="3254.0" text="6. Location and Regional Factors">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="3281.0" prefHeight="20.0" prefWidth="820.0" text="A. What are your accommodation arrangements when on placement*: (If you do not know this, please put what you are planning to do.)" wrapText="true" />
+                        <ChoiceBox fx:id="accommodationArrangementsChoiceBox" layoutX="16.0" layoutY="3301.0" prefWidth="150.0" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="3334.0" prefHeight="20.0" prefWidth="820.0" text="If Other, please state below." wrapText="true" />
+                        <TextField fx:id="accommodationOtherTextField" layoutX="16.0" layoutY="3354.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="3389.0" prefHeight="20.0" prefWidth="820.0" text="B. Overseas Placement: Have you checked the Foreign, Commonwealth and Development Office for information on the country of your placement?" wrapText="true" />
+                        <ChoiceBox fx:id="overseasPlacementOfficeChoiceBox" layoutX="16.0" layoutY="3409.0" prefWidth="150.0" />
+                        <Hyperlink fx:id="studFormHyperlink4" layoutX="15.0" layoutY="3442.0" onAction="#goToUrl4" text="https://www.gov.uk/government/organisations/foreign-commonwealth-development-office" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="3472.0" prefHeight="40.0" prefWidth="820.0" text="C. Overseas Placement: Are you aware of any risks at the organisation’s main location? (For example, this might include civil disorder, crime, environmental disasters, infectious disease, or poor healthcare access (this includes the COVID risk))" wrapText="true" />
+                        <ChoiceBox fx:id="overseasHealthChoiceBox" layoutX="16.0" layoutY="3512.0" prefWidth="150.0" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="3544.0" prefHeight="20.0" prefWidth="820.0" text="If no, please go back to the question above." wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="3564.0" prefHeight="20.0" prefWidth="820.0" text="If yes, please provide further information below." wrapText="true" />
+                        <TextField fx:id="overseasHealthInfoTextField" alignment="TOP_LEFT" layoutX="16.0" layoutY="3584.0" prefHeight="78.0" prefWidth="820.0" />
+                        <Label layoutX="17.0" layoutY="3671.0" text="7. Health and Environmental Factors">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" layoutX="17.0" layoutY="3698.0" prefHeight="40.0" prefWidth="820.0" text="A. Are you aware of any precautionary measures you are required to undertake before, during, or after the placement*? (For example: vaccinations, PPE, medical or dietary advice, living arrangements.)" wrapText="true" />
+                        <ChoiceBox fx:id="precautionaryMeasuresChoiceBox" layoutX="17.0" layoutY="3738.0" prefWidth="150.0" />
+                        <Label alignment="TOP_LEFT" layoutX="13.0" layoutY="3772.0" prefHeight="20.0" prefWidth="820.0" text="If yes, please provide details below of the precautionary measures." wrapText="true" />
+                        <TextField fx:id="precautionaryMeasuresTextField" alignment="TOP_LEFT" layoutX="15.0" layoutY="3792.0" prefHeight="78.0" prefWidth="820.0" />
+                        <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="3879.0" prefHeight="20.0" prefWidth="820.0" text="B. Have you downloaded the “SafeZone” app using your university credentials*?" wrapText="true" />
+                        <ChoiceBox fx:id="safeZoneAppChoiceBox" layoutX="16.0" layoutY="3899.0" prefWidth="150.0" />
+                        <Hyperlink fx:id="studFormHyperlink5" layoutX="15.0" layoutY="3932.0" onAction="#goToUrl5" text="https://le.ac.uk/study/student-support/safezone" />
+                        <Label alignment="TOP_LEFT" layoutX="18.0" layoutY="3956.0" prefHeight="20.0" prefWidth="820.0" text="C. Overseas Placement. Have you applied for your Global Health Insurance Card?" wrapText="true" />
+                        <ChoiceBox fx:id="globalHealthInsuranceChoiceBox" layoutX="18.0" layoutY="3976.0" prefWidth="150.0" />
+                        <Hyperlink fx:id="studFormHyperlink6" layoutX="16.0" layoutY="4007.0" onAction="#goToUrl6" text="https://www.nhs.uk/using-the-nhs/healthcare-abroad/apply-for-a-free-uk-global-health-insurance-card-ghic/" />
+                        <Label layoutX="18.0" layoutY="4031.0" text="8. Personal Factors">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" layoutX="22.0" layoutY="4058.0" prefHeight="40.0" prefWidth="820.0" text="A. Have you considered any adjustments with your employer that may be required for you to carry out the role relating to any disability or health condition*. If you are unsure about this subject, then we recommend you reach out through the link below." wrapText="true" />
+                        <ChoiceBox fx:id="adjustmentsChoiceBox" layoutX="20.0" layoutY="4098.0" prefWidth="150.0" />
+                        <Hyperlink fx:id="studFormHyperlink7" layoutX="22.0" layoutY="4131.0" onAction="#goToUrl7" prefHeight="24.0" prefWidth="200.0" text="https://le.ac.uk/accessability-centre" />
+                        <Label layoutX="22.0" layoutY="4155.0" text="9. Policies and Insurance (Overseas Placement)">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" layoutX="23.0" layoutY="4182.0" prefHeight="40.0" prefWidth="820.0" text="A. Overseas Placement. Are you aware that you must submit a Student Travel Application Form once your placement has been approved? Best practice is to submit this form after placement approval; however, you may want to submit it now if your start date is in close proximity." wrapText="true" />
+                        <ChoiceBox fx:id="overseasStudentApplicationFormChoiceBox" layoutX="21.0" layoutY="4222.0" prefWidth="150.0" />
+                        <Hyperlink fx:id="studFormHyperlink8" layoutX="21.0" layoutY="4275.0" onAction="#goToUrl8" prefHeight="24.0" prefWidth="533.0" text="https://uniofleicester.sharepoint.com/sites/Insurance/SitePages/Staff-Student-Overseas-Travel.aspx" />
+                        <Label alignment="TOP_LEFT" layoutX="22.0" layoutY="4255.0" prefHeight="20.0" prefWidth="820.0" text="If no, please follow the link below and complete the Student Travel Application Form." wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="22.0" layoutY="4299.0" prefHeight="20.0" prefWidth="820.0" text="B. Overseas Placement. Is your country of work listed as one that require risk assessment escalation?" wrapText="true" />
+                        <ChoiceBox fx:id="overseasPlacementRiskEscalation" layoutX="20.0" layoutY="4319.0" prefWidth="150.0" />
+                        <Hyperlink fx:id="studFormHyperlink9" layoutX="21.0" layoutY="4350.0" onAction="#goToUrl9" prefHeight="24.0" prefWidth="533.0" text="https://uniofleicester.sharepoint.com/sites/Insurance/SitePages/Staff-Student-Overseas-Travel.aspx" />
+                        <Button fx:id="submitButton" layoutX="20.0" layoutY="4690.0" mnemonicParsing="false" onAction="#submitButtonOnAction" prefHeight="26.0" prefWidth="113.0" styleClass="button2" stylesheets="@styles.css" text="Submit" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="21.0" layoutY="4374.0" text="Declaration and Signature">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" layoutX="22.0" layoutY="4401.0" prefHeight="52.0" prefWidth="820.0" text="Please remember you are representing the University of Leicester while you are on a placement. By completing this form you accept the conditions and requirements listed in the Responsibilities of Students on page one of this document. You also confirm all the information provided in this form is factually correct at the time of submitting." wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="22.0" layoutY="4461.0" prefHeight="20.0" prefWidth="820.0" text="Name*:" wrapText="true" />
+                        <TextField fx:id="nameTextField" layoutX="22.0" layoutY="4481.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="22.0" layoutY="4517.0" prefHeight="20.0" prefWidth="820.0" text="Digital signature*:" wrapText="true" />
+                        <TextField fx:id="signatureTextField" layoutX="22.0" layoutY="4537.0" prefHeight="26.0" prefWidth="341.0" />
+                        <DatePicker fx:id="dateDatePicker" layoutX="23.0" layoutY="4593.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="23.0" layoutY="4573.0" prefHeight="20.0" prefWidth="820.0" text="Date*:" wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="21.0" layoutY="4629.0" prefHeight="51.0" prefWidth="820.0" text="Please return this completed form to the relevant department within the University. Note that authorisation request can take between 10-15 working days once this form has been received by the University. Please allow at least 10 working days before checking on the progress of your Placement authorisation request." wrapText="true" />
+                        <Label fx:id="errorMessageLabel" alignment="TOP_LEFT" layoutX="18.0" layoutY="4725.0" prefHeight="20.0" prefWidth="820.0" textFill="RED" wrapText="true" />
+                        <Button fx:id="saveButton" layoutX="147.0" layoutY="4690.0" mnemonicParsing="false" onAction="#saveButtonOnAction" prefHeight="26.0" prefWidth="113.0" styleClass="button2" stylesheets="@styles.css" text="Save" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Label alignment="TOP_LEFT" layoutX="15.0" layoutY="837.0" prefHeight="20.0" prefWidth="420.0" text="NOTE: You will not be able the student number after your first submission!" textFill="RED" wrapText="true" />
+                     </children></AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

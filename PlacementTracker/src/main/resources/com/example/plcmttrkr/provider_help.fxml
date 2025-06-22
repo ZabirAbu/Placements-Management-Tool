@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.plcmttrkr.ProviderHelpController">
+   <children>
+      <AnchorPane fx:id="dragBar" layoutX="200.0" onMouseDragged="#dragBarOnMovementAction" onMousePressed="#dragBarOnAction" prefHeight="40.0" prefWidth="900.0">
+         <children>
+            <Button fx:id="minimiseButton" layoutX="820.0" mnemonicParsing="false" onAction="#minimiseButtonOnAction" prefHeight="40.0" prefWidth="40.0" stylesheets="@styles.css" text="-" textFill="#0000007a" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Rockwell Extra Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelButton" layoutX="860.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="40.0" prefWidth="40.0" stylesheets="@styles.css" text="X" textFill="#0000007a" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #7663FC;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="900.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="logoutButton" layoutY="534.0" mnemonicParsing="false" onAction="#logoutButtonOnAction" prefHeight="40.0" prefWidth="200.0" styleClass="button2" stylesheets="@styles.css" text="Logout" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="75.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo_cropped.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="homeButton" layoutX="3.0" layoutY="176.0" mnemonicParsing="false" onAction="#homeButtonOnAction" prefHeight="40.0" prefWidth="200.0" styleClass="button2" stylesheets="@styles.css" text="Home" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="formButton" layoutX="3.0" layoutY="216.0" mnemonicParsing="false" onAction="#formButtonOnAction" prefHeight="40.0" prefWidth="200.0" styleClass="button2" stylesheets="@styles.css" text="Form" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutY="256.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #4a31fb;" text="Help" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="210.0" layoutY="50.0" prefHeight="560.0" prefWidth="900.0">
+         <children>
+            <AnchorPane layoutX="19.0" layoutY="20.0" prefHeight="215.0" prefWidth="841.0" style="-fx-background-color: #e8e8e8;" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <Label fx:id="dateLabel" prefHeight="20.0" prefWidth="79.0" AnchorPane.rightAnchor="43.0" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="accountTypeLabel" layoutX="27.0" layoutY="14.0" prefHeight="20.0" prefWidth="229.0" text="Help - Placement Provider" AnchorPane.leftAnchor="27.0" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="welcomeUser" prefHeight="35.0" prefWidth="406.0" AnchorPane.leftAnchor="43.0" AnchorPane.topAnchor="40.0">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="58.0" prefHeight="23.0" prefWidth="182.0" text="Submit provider form " underline="true" />
+                  <Label layoutX="27.0" layoutY="81.0" prefHeight="23.0" prefWidth="334.0" text="1) Click the form tab on the left to acess the provider form" />
+                  <Label layoutX="27.0" layoutY="104.0" prefHeight="23.0" prefWidth="266.0" text="2) Fill in all necessary information in each field" />
+                  <Label layoutX="27.0" layoutY="127.0" prefHeight="23.0" prefWidth="334.0" text="3) Press submit to store your information" />
+                  <Label layoutX="365.0" layoutY="58.0" prefHeight="23.0" prefWidth="182.0" text="Edit provider form " underline="true" />
+                  <Label layoutX="365.0" layoutY="81.0" prefHeight="23.0" prefWidth="458.0" text="1) Click the form tab on the left to acess the provider form you have already filled out" />
+                  <Label layoutX="365.0" layoutY="104.0" prefHeight="23.0" prefWidth="334.0" text="2) Edit which ever text fields you need to" />
+                  <Label layoutX="365.0" layoutY="127.0" prefHeight="23.0" prefWidth="350.0" text="3) Press the save button to save the changes made to the form " />
+                  <Label layoutX="365.0" layoutY="150.0" prefHeight="23.0" prefWidth="350.0" text="4) Press submit to resubmit the edited form" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="19.0" layoutY="253.0" prefHeight="279.0" prefWidth="671.0" style="-fx-background-color: #e8e8e8;" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="19.0">
+               <children>
+                  <Label layoutX="111.0" layoutY="67.0" text="Contact details" underline="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="112.0" layoutY="100.0" text="Phone: 0116 252 2522" />
+                  <Label layoutX="112.0" layoutY="124.0" text="Email:  help@uol.le.ac.uk" />
+                  <Hyperlink fx:id="link1" layoutX="410.0" layoutY="92.0" onAction="#setLink1" text="Employers' liability insurance" />
+                  <Label layoutX="414.0" layoutY="62.0" text="Usefull links" underline="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Line endX="52.0" endY="222.0" layoutX="283.0" layoutY="25.0" startX="52.0" startY="11.0" />
+                  <Hyperlink fx:id="link2" layoutX="410.0" layoutY="121.0" onAction="#setLink2" text="University of Leicester" />
+                  <Hyperlink fx:id="link3" layoutX="410.0" layoutY="149.0" onAction="#setLink3" text="Overseas Travel Information" />
+                  <Hyperlink fx:id="link4" layoutX="411.0" layoutY="177.0" onAction="#setLink4" text="Information about SafeZone" />
+                  <Hyperlink fx:id="link5" layoutX="410.0" layoutY="204.0" onAction="#setLink5" text="Information on Healthcare Cover Abroad" />
+               </children></AnchorPane>
+            <AnchorPane layoutX="710.0" layoutY="253.0" prefHeight="279.0" prefWidth="151.0" style="-fx-background-color: #e8e8e8;">
+               <children>
+                  <Label layoutX="33.0" layoutY="14.0" text="Created by" underline="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="51.0" text="Vaibhav J. Guela" />
+                  <Label layoutX="13.0" layoutY="91.0" text="Jakub J. Jankowski" />
+                  <Label layoutX="13.0" layoutY="71.0" prefHeight="17.0" prefWidth="70.0" text="Zabir Abu" />
+                  <Label layoutX="13.0" layoutY="111.0" text="Louis Gordon Doughton" />
+                  <Label layoutX="11.0" layoutY="131.0" text="Taher Murtuza" />
+                  <Label layoutX="13.0" layoutY="171.0" text="Luke K.E. Williamson" />
+                  <Label layoutX="13.0" layoutY="151.0" text="Dhruv K. Parmar" />
+                  <Label layoutX="13.0" layoutY="191.0" text="Rohan Kanani" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

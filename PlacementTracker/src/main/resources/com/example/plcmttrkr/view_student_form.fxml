@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.plcmttrkr.ViewStudentFormController">
+   <children>
+      <AnchorPane fx:id="dragBar" layoutX="175.0" onMouseDragged="#dragBarOnMovementAction" onMousePressed="#dragBarOnAction" prefHeight="25.0" prefWidth="345.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="cancelButton" layoutX="38.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="25.0" prefWidth="25.0" stylesheets="@styles.css" text="X" textFill="#0000007a" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="minimiseButton" layoutX="293.0" mnemonicParsing="false" onAction="#minimiseButtonOnAction" prefHeight="25.0" prefWidth="25.0" stylesheets="@styles.css" text="-" textFill="#0000007a" AnchorPane.rightAnchor="26.4" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Rockwell Extra Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="200.0" layoutY="4.0" text="Student Form Viewer">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ScrollPane layoutX="7.0" layoutY="42.0" prefHeight="3000.0" prefWidth="520.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1849.0" prefWidth="520.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="40.0" text="1. Student Details">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="v1" layoutX="14.0" layoutY="60.0" text="First Name:" />
+                  <Label fx:id="v2" layoutX="14.0" layoutY="78.0" text="Surname:" />
+                  <Label fx:id="v3" layoutX="14.0" layoutY="96.0" text="Student Number:" />
+                  <Label fx:id="v4" layoutX="14.0" layoutY="114.0" text="Email Address:" />
+                  <Label fx:id="v5" layoutX="14.0" layoutY="132.0" text="Programme of study:" />
+                  <Label fx:id="v6" layoutX="15.0" layoutY="150.0" text="School/Department:" />
+                  <Label fx:id="v7" layoutX="14.0" layoutY="168.0" text="Contact Telephone number:" />
+                  <Label fx:id="v8" layoutX="14.0" layoutY="186.0" text="International student with a Student Visa:" />
+                  <Label fx:id="v9" layoutX="14.0" layoutY="204.0" text="Student Visa duration accounts for placement:" />
+                  <Label layoutX="14.0" layoutY="249.0" text="2. Placement Provider Details">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="v10" layoutX="14.0" layoutY="269.0" text="Name of Organisation:" />
+                  <Label fx:id="v11" layoutX="14.0" layoutY="287.0" text="Address where the placement will be based:" />
+                  <Label fx:id="v12" layoutX="14.0" layoutY="305.0" text="Postcode:" />
+                  <Label fx:id="v13" layoutX="14.0" layoutY="323.0" text="Web Address:" />
+                  <Label fx:id="v14" layoutX="14.0" layoutY="341.0" text="Contact Name:" />
+                  <Label fx:id="v15" layoutX="15.0" layoutY="359.0" text="Contact Job Title:" />
+                  <Label fx:id="v16" layoutX="15.0" layoutY="377.0" text="Contact Email:" />
+                  <Label fx:id="v17" layoutX="15.0" layoutY="395.0" text="Contact Telephone Number:" />
+                  <Label layoutX="14.0" layoutY="440.0" text="3. Placement Role Details">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="v18" layoutX="14.0" layoutY="460.0" text="Role Title:" />
+                  <Label fx:id="v19" layoutX="14.0" layoutY="478.0" text="Role Start date:" />
+                  <Label fx:id="v20" layoutX="14.0" layoutY="496.0" text="Role End date:" />
+                  <Label fx:id="v21" layoutX="14.0" layoutY="514.0" text="Working hours per week:" />
+                  <Label fx:id="v22" layoutX="14.0" layoutY="532.0" text="Role include a probation period:" />
+                  <Label fx:id="v24" layoutX="15.0" layoutY="569.0" text="Salary per year:" />
+                  <Label fx:id="v25" layoutX="14.0" layoutY="587.0" text="Source role:" />
+                  <Label fx:id="v27" layoutX="13.0" layoutY="605.0" text="Informed placement provider this form is part of degree:" />
+                  <Label fx:id="v28" alignment="TOP_LEFT" layoutX="13.0" layoutY="623.0" prefHeight="122.0" prefWidth="490.0" text="Role Description:" wrapText="true" />
+                  <Label layoutX="15.0" layoutY="748.0" text="4. Work Factors">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="v29" layoutX="15.0" layoutY="768.0" text="Home/Remote work:" />
+                  <Label fx:id="v30" alignment="TOP_LEFT" layoutX="15.0" layoutY="786.0" prefHeight="114.0" prefWidth="487.0" text="Overview:" wrapText="true" />
+                  <Label fx:id="v31" alignment="TOP_LEFT" layoutX="12.0" layoutY="907.0" prefHeight="118.0" prefWidth="493.0" text="Why does the role involve working from home:" wrapText="true" />
+                  <Label layoutX="14.0" layoutY="1047.0" text="5. Transport and Travel Factors">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="v32" layoutX="14.0" layoutY="1067.0" text="Travel to/from residence/placement:" />
+                  <Label fx:id="v34" layoutX="14.0" layoutY="1103.0" text="Different location for placement:" />
+                  <Label fx:id="v36" layoutX="15.0" layoutY="1139.0" text="Overseas:" />
+                  <Label fx:id="v37" layoutX="15.0" layoutY="1157.0" text="Read overseas travel guidance:" />
+                  <Label fx:id="v38" layoutX="15.0" layoutY="1175.0" text="Overseas finance consideration:" />
+                  <Label layoutX="15.0" layoutY="1217.0" text="6. Location and Regional Factors">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="v39" layoutX="15.0" layoutY="1237.0" text="Accommodation arrangements:" />
+                  <Label fx:id="v41" layoutX="15.0" layoutY="1273.0" text="Foreign, Commonwealth and Development Office checked for overseas:" />
+                  <Label fx:id="v42" layoutX="15.0" layoutY="1291.0" text="Risks at overseas location:" />
+                  <Label layoutX="17.0" layoutY="1410.0" text="7. Health and Environmental Factors">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="v44" layoutX="17.0" layoutY="1430.0" text="Precautionary measures:" />
+                  <Label fx:id="v46" layoutX="15.0" layoutY="1549.0" text="Downloaded SafeZone app:" />
+                  <Label fx:id="v47" layoutX="15.0" layoutY="1567.0" text="Overseas global insurance health card:" />
+                  <Label fx:id="v23" layoutX="14.0" layoutY="550.0" text="Probation period length:" />
+                  <Label fx:id="v33" layoutX="14.0" layoutY="1085.0" text="Travel (other):" />
+                  <Label fx:id="v35" layoutX="14.0" layoutY="1121.0" text="Different location details:" />
+                  <Label fx:id="v40" layoutX="15.0" layoutY="1255.0" text="Accommodation arrangements (other):" />
+                  <Label fx:id="v43" alignment="TOP_LEFT" layoutX="15.0" layoutY="1309.0" prefHeight="90.0" prefWidth="488.0" text="Risks at overseas location (further information):" wrapText="true" />
+                  <Label fx:id="v45" alignment="TOP_LEFT" layoutX="17.0" layoutY="1448.0" prefHeight="100.0" prefWidth="475.0" text="Precautionary measures (information):" wrapText="true" />
+                  <Label layoutX="14.0" layoutY="1619.0" text="8. Personal Factors">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="v48" layoutX="14.0" layoutY="1639.0" text="Adjustments:" />
+                  <Label layoutX="15.0" layoutY="1668.0" text="9. Policies and Insurance (Overseas Placement)">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="v49" layoutX="15.0" layoutY="1688.0" text="Overseas student travel application form:" />
+                  <Label fx:id="v50" layoutX="15.0" layoutY="1706.0" text="Overseas risk escalation:" />
+                  <Label layoutX="14.0" layoutY="1761.0" text="Declaration and Signature">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="v51" layoutX="15.0" layoutY="1781.0" text="Name:" />
+                  <Label fx:id="v52" layoutX="15.0" layoutY="1799.0" text="Signature:" />
+                  <Label fx:id="v53" layoutX="14.0" layoutY="1817.0" text="Date:" />
+               </children></AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

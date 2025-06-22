@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.plcmttrkr.DashboardController">
+   <children>
+      <AnchorPane fx:id="dragBar" layoutX="200.0" onMouseDragged="#dragBarOnMovementAction" onMousePressed="#dragBarOnAction" prefHeight="40.0" prefWidth="900.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="minimiseButton" layoutX="820.0" mnemonicParsing="false" onAction="#minimiseButtonOnAction" prefHeight="40.0" prefWidth="40.0" stylesheets="@styles.css" text="-" textFill="#0000007a" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Rockwell Extra Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelButton" layoutX="737.0" layoutY="4.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="40.0" prefWidth="40.0" stylesheets="@styles.css" text="X" textFill="#0000007a" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+      <AnchorPane prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #7663FC;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="logoutButton" layoutY="534.0" mnemonicParsing="false" onAction="#logoutButtonOnAction" prefHeight="40.0" prefWidth="200.0" styleClass="button2" stylesheets="@styles.css" text="Logout" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="75.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo_cropped.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="3.0" layoutY="176.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #4a31fb;" text="Home" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="formButton" layoutX="3.0" layoutY="216.0" mnemonicParsing="false" onAction="#formButtonOnAction" prefHeight="40.0" prefWidth="200.0" styleClass="button2" stylesheets="@styles.css" text="Form" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="helpButton" layoutY="256.0" mnemonicParsing="false" onAction="#helpButtonOnAction" prefHeight="40.0" prefWidth="200.0" styleClass="button2" stylesheets="@styles.css" text="Help" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+      <AnchorPane layoutX="200.0" layoutY="40.0" prefHeight="560.0" prefWidth="900.0">
+         <children>
+            <AnchorPane layoutX="19.0" layoutY="20.0" prefHeight="146.0" prefWidth="861.0" style="-fx-background-color: #e8e8e8;" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <Label fx:id="dateLabel" prefHeight="20.0" prefWidth="79.0" AnchorPane.rightAnchor="43.0" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="accountTypeLabel" prefHeight="20.0" prefWidth="184.0" text="Home - Student" AnchorPane.leftAnchor="43.0" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="welcomeUser" prefHeight="35.0" prefWidth="406.0" AnchorPane.leftAnchor="43.0" AnchorPane.topAnchor="40.0">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="19.0" layoutY="184.0" prefHeight="350.0" prefWidth="420.0" style="-fx-background-color: #e8e8e8;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="19.0">
+               <children>
+                  <ProgressBar fx:id="progessBar" layoutX="96.0" layoutY="49.0" prefHeight="48.0" prefWidth="200.0" progress="0.31" />
+                  <Label fx:id="accountTypeLabel1" alignment="CENTER" layoutX="74.0" layoutY="14.0" prefHeight="35.0" prefWidth="243.0" text="Form Progress">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="text1" alignment="CENTER" layoutX="53.0" layoutY="142.0" prefHeight="35.0" prefWidth="286.0" text="- You have started your placement form" />
+                  <Label fx:id="accountTypeLabel12" alignment="CENTER" layoutX="74.0" layoutY="107.0" prefHeight="35.0" prefWidth="243.0" text="Information">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="text2" alignment="CENTER" layoutX="53.0" layoutY="159.0" prefHeight="35.0" prefWidth="286.0" text="- Your form has been sucessfully submitted" />
+                  <Label fx:id="text3" alignment="CENTER" layoutX="36.0" layoutY="176.0" prefHeight="35.0" prefWidth="348.0" text="- Your placement provider has started completing your form" />
+                  <Label fx:id="text4" alignment="CENTER" layoutX="36.0" layoutY="193.0" prefHeight="35.0" prefWidth="348.0" text="- Your placement provider form has been sucessfully submitted" />
+                  <Label fx:id="text5" alignment="CENTER" layoutX="15.0" layoutY="210.0" prefHeight="35.0" prefWidth="390.0" text="- Your placement tutor is currently carrying out the risk assessment form" />
+                  <Label fx:id="text6" alignment="CENTER" layoutX="15.0" layoutY="227.0" prefHeight="35.0" prefWidth="390.0" text="- Your placement tutor has submitted your form" />
+               </children></AnchorPane>
+            <AnchorPane layoutX="461.0" layoutY="190.0" prefHeight="350.0" prefWidth="420.0" style="-fx-background-color: #e8e8e8;">
+               <children>
+                  <Label fx:id="accountTypeLabel11" alignment="CENTER" layoutX="88.0" layoutY="14.0" prefHeight="35.0" prefWidth="243.0" text="About Me">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="uniTextField" alignment="CENTER" layoutX="74.0" layoutY="175.0" prefHeight="27.0" prefWidth="270.0" promptText="Enter Univeristy" style="-fx-background-color: #e8e8e8;" />
+                  <ImageView fitHeight="60.0" fitWidth="61.0" layoutX="179.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@user_logo.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="courseTextField" alignment="CENTER" layoutX="74.0" layoutY="202.0" prefHeight="27.0" prefWidth="270.0" promptText="Enter Course" style="-fx-background-color: #e8e8e8;" />
+                  <TextField fx:id="snumberTextField" alignment="CENTER" layoutX="74.0" layoutY="229.0" prefHeight="27.0" prefWidth="270.0" promptText="Student Number" style="-fx-background-color: #e8e8e8;" />
+                  <Button fx:id="updateInformationButton" layoutX="142.0" layoutY="270.0" mnemonicParsing="false" onAction="#updateInformationButtonOnAction" prefHeight="26.0" prefWidth="135.0" styleClass="button2" stylesheets="@styles.css" text="Update Information" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="usernameLabel" alignment="CENTER" layoutX="160.0" layoutY="131.0" prefHeight="35.0" prefWidth="98.0" text="Username">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="errorMsgLabel" alignment="CENTER" layoutX="50.0" layoutY="307.0" prefHeight="35.0" prefWidth="319.0" textFill="RED" />
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

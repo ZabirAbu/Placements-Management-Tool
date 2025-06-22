@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.plcmttrkr.SignUpController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="175.0" style="-fx-background-color: #7663FC;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="345.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="175.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="125.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.19999999999998863" AnchorPane.topAnchor="125.0">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="25.0" layoutY="368.0" text="Phone: 0116 252 2522" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+         </children></AnchorPane>
+      <AnchorPane fx:id="dragBar" layoutX="175.0" onMouseDragged="#dragBarOnMovementAction" onMousePressed="#dragBarOnAction" prefHeight="25.0" prefWidth="345.0" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="cancelButton" layoutX="38.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="25.0" prefWidth="25.0" stylesheets="@styles.css" text="X" textFill="#0000007a" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="minimiseButton" layoutX="293.0" mnemonicParsing="false" onAction="#minimiseButtonOnAction" prefHeight="25.0" prefWidth="25.0" stylesheets="@styles.css" text="-" textFill="#0000007a" AnchorPane.rightAnchor="26.4" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Rockwell Extra Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="175.0" layoutY="47.0" prefHeight="375.0" prefWidth="345.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <Label layoutX="117.0" layoutY="14.0" prefHeight="27.0" prefWidth="112.0" text="Sign up now!" AnchorPane.leftAnchor="117.0" AnchorPane.rightAnchor="116.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="forenameTextField" layoutX="85.0" layoutY="53.0" prefHeight="25.0" prefWidth="175.0" promptText="Forename" />
+            <PasswordField fx:id="createPasswordField" layoutX="85.0" layoutY="161.0" prefHeight="25.0" prefWidth="175.0" promptText="Create Password" />
+            <Label layoutX="97.0" layoutY="341.0" text="Already a user?">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="signInButton" layoutX="186.0" layoutY="336.0" mnemonicParsing="false" onAction="#signInButtonOnAction" prefHeight="26.0" prefWidth="62.0" stylesheets="@styles.css" text="Sign In" textFill="#7663fc">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="msg" layoutX="85.0" layoutY="301.0" prefHeight="37.0" prefWidth="175.0" textAlignment="CENTER" textFill="RED" wrapText="true" />
+            <Button fx:id="signUpButton" layoutX="85.0" layoutY="272.0" mnemonicParsing="false" onAction="#signUpButtonOnAction" prefHeight="25.0" prefWidth="175.0" styleClass="button2" stylesheets="@styles.css" text="Sign up" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <TextField fx:id="surnameTextField" layoutX="85.0" layoutY="88.0" prefHeight="25.0" prefWidth="175.0" promptText="Surname" />
+            <TextField fx:id="createUsernameTextField" layoutX="85.0" layoutY="124.0" prefHeight="25.0" prefWidth="175.0" promptText="Create Username" />
+            <PasswordField fx:id="confirmPasswordField" layoutX="85.0" layoutY="198.0" prefHeight="25.0" prefWidth="175.0" promptText="Confirm Password" />
+            <ChoiceBox fx:id="roleChoiceBox" layoutX="118.0" layoutY="234.0" prefHeight="26.0" prefWidth="143.0" />
+            <Label layoutX="85.0" layoutY="238.0" text="Role:" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

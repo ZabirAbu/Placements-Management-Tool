@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.plcmttrkr.ProviderFormController">
+   <children>
+      <AnchorPane fx:id="dragBar" layoutY="-1.0" onMouseDragged="#dragBarOnMovementAction" onMousePressed="#dragBarOnAction" prefHeight="47.0" prefWidth="1000.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="cancelButton" layoutX="1078.0" layoutY="1.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="40.0" prefWidth="40.0" stylesheets="@styles.css" text="X" textFill="#0000007a">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="minimiseButton" layoutX="1038.0" layoutY="1.0" mnemonicParsing="false" onAction="#minimiseButtonOnAction" prefHeight="40.0" prefWidth="40.0" stylesheets="@styles.css" text="-" textFill="#0000007a">
+               <font>
+                  <Font name="Rockwell Extra Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #7663FC;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="logoutButton1" layoutY="534.0" mnemonicParsing="false" onAction="#logoutButtonOnAction" prefHeight="40.0" prefWidth="200.0" styleClass="button2" stylesheets="@styles.css" text="Logout" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="75.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo_cropped.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="homeButton" layoutX="3.0" layoutY="176.0" mnemonicParsing="false" onAction="#homeButtonOnAction" prefHeight="40.0" prefWidth="200.0" styleClass="button2" stylesheets="@styles.css" text="Home" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="providerFormButton" layoutX="3.0" layoutY="216.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #4a31fb;" text="Form" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="helpbutton" layoutY="256.0" mnemonicParsing="false" onAction="#helpButtonOnAction" prefHeight="40.0" prefWidth="200.0" styleClass="button2" stylesheets="@styles.css" text="Help" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="195.0" layoutY="31.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="900.0" AnchorPane.leftAnchor="200.0">
+         <children>
+            <AnchorPane layoutX="19.0" layoutY="37.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="862.0" style="-fx-background-color: #e8e8e8;" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="19.0">
+               <children>
+                  <Label fx:id="userTypeLabel" prefHeight="20.0" prefWidth="220.0" text="Form - Placement Provider" AnchorPane.leftAnchor="43.0" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Please fill out the form below!" AnchorPane.leftAnchor="43.0" AnchorPane.topAnchor="40.0">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ScrollPane layoutX="20.0" layoutY="137.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="5500.0" prefWidth="885.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="119.0">
+               <content>
+                  <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="5347.0" prefWidth="862.0" style="-fx-background-color: #e8e8e8;">
+                     <children>
+                        <Label layoutX="16.0" layoutY="14.0" text="Placement Provider Form">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="16.0" layoutY="82.0" text="Your Responsibilities as a Placement Provider">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" layoutX="22.0" layoutY="110.0" prefHeight="20.0" prefWidth="548.0" text="By submitting this form, you confirm that you will meet the following requirements for your placement:" wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="22.0" layoutY="130.0" prefHeight="20.0" prefWidth="820.0" text="1. Have clear objectives for the placement and what you expect the student to learn and demonstrate throughout their placement.  " wrapText="true" />
+                        <Label layoutX="22.0" layoutY="150.0" text="2. Appoint a suitably qualified and experienced staff member to act as the Student’s line manager/supervisor." />
+                        <Label layoutX="23.0" layoutY="167.0" text="3. Provide any necessary training for the student to complete their role, in the same way you would treat any new or existing employee." />
+                        <Label layoutX="23.0" layoutY="184.0" text="4. Ensure the student is briefed on any necessary health and safety/data protection requirements for the role." />
+                        <Label layoutX="23.0" layoutY="201.0" text="5. Provide regular line management and supervision for your placement student." />
+                        <Label layoutX="23.0" layoutY="218.0" text="6. Provide opportunities for the student to develop their skills and confidence in the workplace." />
+                        <Label layoutX="23.0" layoutY="235.0" text="7. If possible, provide an in-house mentor to support the student throughout their placement." />
+                        <Label layoutX="23.0" layoutY="252.0" text="8. Keep in contact with the University about any questions, concerns, or significant changes to a student’s placement. " />
+                        <Label layoutX="23.0" layoutY="269.0" text="9. Sign off the student’s monthly reflective journal if you are employing an international student on a Student Visa." />
+                        <Label layoutX="19.0" layoutY="338.0" text="11. Ensure suitable financial arrangements are in place with the Student, to ensure they will be paid correctly and in a timely manner.  " />
+                        <Label alignment="TOP_LEFT" layoutX="20.0" layoutY="286.0" prefHeight="54.0" prefWidth="825.0" text="10. Be the primary owner of the risks arising from the student’s work on the placement. As part of this, UK organisations should hold public liability insurance or equivalent and employers’ liability insurance or equivalent. If a student will be acting in an advisory nature, organisations should also hold Professional Indemnity Insurance." wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="19.0" layoutY="356.0" prefHeight="40.0" prefWidth="825.0" text="12. Not use the Students’ access to University resources such as digital library resources for your own commercial benefit, as such use is prohibited by the University’s licences with software and content providers. " wrapText="true" />
+                        <Label layoutX="19.0" layoutY="396.0" text="Please fill in every section required." />
+                        <Label layoutX="20.0" layoutY="414.0" text="1. Placement Provider Details">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="441.0" text="a. Name of Organisation" />
+                        <Label layoutX="29.0" layoutY="488.0" text="b. Address where the placement will be based" />
+                        <Label layoutX="30.0" layoutY="546.0" text="c. Postcode" />
+                        <Label layoutX="30.0" layoutY="602.0" text="d. Web Address" />
+                        <Label layoutX="32.0" layoutY="671.0" text="• Environmental damage  " />
+                        <Label layoutX="32.0" layoutY="688.0" text="• Manufacture and sale of armaments   " />
+                        <Label layoutX="32.0" layoutY="705.0" text="• Manufacture and sale of tobacco products" />
+                        <Label layoutX="31.0" layoutY="722.0" text="• Activities abroad which would be considered illegal in the UK" />
+                        <Label layoutX="32.0" layoutY="654.0" text="e. Does your organisation undertake any activity in the following areas: " />
+                        <TextField fx:id="organisationNameTextField" layoutX="30.0" layoutY="458.0" prefHeight="26.0" prefWidth="341.0" />
+                        <TextField fx:id="placementAddressTextField" layoutX="30.0" layoutY="505.0" prefHeight="26.0" prefWidth="341.0" />
+                        <TextField fx:id="postcodeTextField" layoutX="30.0" layoutY="563.0" prefHeight="26.0" prefWidth="341.0" />
+                        <TextField fx:id="webAddressTextField" layoutX="30.0" layoutY="619.0" prefHeight="26.0" prefWidth="341.0" />
+                        <TextField fx:id="organisationActivitiesTextField" layoutX="32.0" layoutY="834.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label layoutX="31.0" layoutY="739.0" text="• The causing of harm or injury to third parties  " />
+                        <Label layoutX="31.0" layoutY="756.0" text="• Gambling/gaming involving money at risk" />
+                        <Label layoutX="30.0" layoutY="860.0" text="2. Placement Student">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="28.0" layoutY="900.0" text="a. Name of University of Leicester student" />
+                        <Label layoutX="28.0" layoutY="967.0" text="3. Placement Provider named contact for University and Placement Student">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="31.0" layoutY="1005.0" prefHeight="17.0" prefWidth="133.0" text="a. Name of main contact" />
+                        <Label alignment="TOP_LEFT" layoutX="26.0" layoutY="1022.0" prefHeight="20.0" prefWidth="825.0" text=" Please note: This person will need to be accessible as the University will be in touch via email or telephone throughout the placement.)" wrapText="true" />
+                        <Label layoutX="29.0" layoutY="1082.0" text="b. Contact Job Title" />
+                        <Label layoutX="32.0" layoutY="1135.0" text="c. Contact Email" />
+                        <TextField fx:id="placementStudentNameTextField" layoutX="28.0" layoutY="924.0" prefHeight="26.0" prefWidth="341.0" />
+                        <TextField fx:id="nameOfMainContactTextField" layoutX="29.0" layoutY="1042.0" prefHeight="26.0" prefWidth="341.0" />
+                        <TextField fx:id="contactJobTitleTextField" layoutX="30.0" layoutY="1099.0" prefHeight="26.0" prefWidth="341.0" />
+                        <TextField fx:id="contactEmailField" layoutX="30.0" layoutY="1152.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label layoutX="32.0" layoutY="1193.0" text="d. Contact Telephone Number" />
+                        <TextField fx:id="contactTelNumberTextField" layoutX="30.0" layoutY="1210.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label layoutX="30.0" layoutY="1252.0" text="4. Placement Role Details">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="jobTitleTextField" layoutX="31.0" layoutY="1299.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="31.0" layoutY="1279.0" prefHeight="20.0" prefWidth="820.0" text="a. Job Title:" wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="32.0" layoutY="1359.0" prefHeight="20.0" prefWidth="481.0" text="If an exact date is not known, please provide the expected month the student will start." wrapText="true" />
+                        <DatePicker fx:id="roleStartDateDatePicker" layoutX="30.0" layoutY="1379.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label layoutX="30.0" layoutY="1342.0" text="b. Role Start date" />
+                        <Label layoutX="29.0" layoutY="1428.0" text="c. Role End date (expected month if unknown)" />
+                        <DatePicker fx:id="roleEndDateDatePicker" layoutX="29.0" layoutY="1445.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label layoutX="27.0" layoutY="1487.0" text="d. Working hours per week" />
+                        <TextField fx:id="workingHoursTextField" layoutX="27.0" layoutY="1511.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label layoutX="30.0" layoutY="1548.0" text="e. Does the role include a probation period?" />
+                        <ChoiceBox fx:id="probationPeriodChoiceBox" layoutX="29.0" layoutY="1573.0" prefWidth="150.0" />
+                        <Label layoutX="26.0" layoutY="1614.0" text="If yes, please provide information on how the probation period will be assessed:" />
+                        <TextField fx:id="ifYesProbationPeriodTextField" layoutX="27.0" layoutY="1631.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label layoutX="29.0" layoutY="1670.0" text="f. Please outline what you expect the student to achieve by the end of the role:" />
+                        <TextField fx:id="endOfRoleExpectTextField" layoutX="27.0" layoutY="1695.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label layoutX="26.0" layoutY="1752.0" text="5. Work factors ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="32.0" layoutY="2284.0" text="6. Travel and transport factors ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="2571.0" text="7. Location and regional factors ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="25.0" layoutY="2728.0" text="8. Health and environmental factors ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="31.0" layoutY="2898.0" text="9. Personal factors ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="3005.0" text="10. Policies and Insurance (UK Providers Only)  ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="24.0" layoutY="4469.0" text="12. Health and Safety">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="24.0" layoutY="3814.0" text="11. Policies and Insurance (Overseas Employers only) ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="4672.0" text="13. University Access and Support">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="4950.0" text="14. Declaration and Signature ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="1779.0" prefHeight="40.0" prefWidth="825.0" text="a. Will the nature of the work undertaken by the student expose them to any hazards or risks? For example this might include operating machinery, working with hazardous materials, or supporting vulnerable children or adults." wrapText="true" />
+                        <ChoiceBox fx:id="hazardChoiceBox" layoutX="33.0" layoutY="1822.0" prefWidth="150.0" />
+                        <Label alignment="TOP_LEFT" layoutX="29.0" layoutY="1854.0" prefHeight="40.0" prefWidth="825.0" text="If yes, please provide details below of the hazards or risks the student will be exposed to, and how you will support them with this:" wrapText="true" />
+                        <TextField fx:id="ifYesHazardTextField" layoutX="29.0" layoutY="1878.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label layoutX="30.0" layoutY="1928.0" text="b. Does the student need any specific training for the role or to undertake tasks?" />
+                        <ChoiceBox fx:id="trainingChoiceBox" layoutX="29.0" layoutY="1951.0" prefWidth="150.0" />
+                        <Label layoutX="33.0" layoutY="1998.0" prefHeight="20.0" prefWidth="692.0" text="If yes, please provide details of how the training will be provided:" />
+                        <TextField fx:id="ifYesTrainingTextField" layoutX="31.0" layoutY="2028.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label layoutX="33.0" layoutY="2070.0" text="c. Does the role involve the student working from their home?" />
+                        <ChoiceBox fx:id="workFromHomeChoiceBox" layoutX="34.0" layoutY="2097.0" prefWidth="150.0" />
+                        <Label layoutX="34.0" layoutY="2137.0" prefHeight="20.0" prefWidth="692.0" text="If yes, how frequently will they work from home:" />
+                        <ChoiceBox fx:id="frequencyWorkFromHomeChoiceBox" layoutX="35.0" layoutY="2168.0" prefWidth="150.0" />
+                        <Label layoutX="35.0" layoutY="2210.0" text="d. (if ‘Yes’ to 5 c) How will the student be monitored and supported during periods that they are working from home?" />
+                        <TextField fx:id="ifYesWorkFromHome" layoutX="34.0" layoutY="2237.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label layoutX="33.0" layoutY="2322.0" text="a. Does the role involve working from sites other than the main address (the address provided in section 1)" />
+                        <ChoiceBox fx:id="workDiffSitesChoiceBox" layoutX="35.0" layoutY="2350.0" prefWidth="150.0" />
+                        <Label layoutX="31.0" layoutY="2390.0" prefHeight="20.0" prefWidth="692.0" text="If yes, please provide details below of how the student will travel from the main address to other sites (e.g. train, company car etc.):" />
+                        <TextField fx:id="ifYesworkDiffSitesTextField" layoutX="28.0" layoutY="2410.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label layoutX="30.0" layoutY="2452.0" text="b. Does this placement require any travel outside of the UK?" />
+                        <ChoiceBox fx:id="travelOutUKChoiceBox" layoutX="29.0" layoutY="2529.0" prefWidth="150.0" />
+                        <Label alignment="TOP_LEFT" layoutX="28.0" layoutY="2469.0" prefHeight="60.0" prefWidth="825.0" text="Please note: If a student is travelling overseas at the Placement Providers request, (as part of the job description) then the university is not responsible for the travel insurance and it is the Placement Provider responsibility to risk assess the travel.If the student is travelling overseas to attend the placement, then the responsibility is with university." wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="28.0" layoutY="2598.0" prefHeight="40.0" prefWidth="825.0" text="a. Does the organisation’s main location for the student present any risks? For example, this might include civil disorder, crime, environmental disasters, infectious disease, or poor healthcare access." wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="26.0" layoutY="2755.0" prefHeight="60.0" prefWidth="825.0" text="a. Is the student required to take precautionary measures to undertake the placement?For example, this might include vaccinations, PPE, medical or dietary advice, or specific living arrangements" wrapText="true" />
+                        <ChoiceBox fx:id="locationRiskChoiceBox" layoutX="28.0" layoutY="2638.0" prefWidth="150.0" />
+                        <Label layoutX="29.0" layoutY="2671.0" text="If yes, please provide details below of the risks and actions in place to minimise the risk:" />
+                        <TextField fx:id="locationRiskTextField" layoutX="27.0" layoutY="2696.0" prefHeight="26.0" prefWidth="341.0" />
+                        <ChoiceBox fx:id="measuresChoiceBox" layoutX="27.0" layoutY="2795.0" prefWidth="150.0" />
+                        <Label layoutX="28.0" layoutY="2828.0" text="If yes, please provide details below of the precautionary measures:" />
+                        <TextField fx:id="ifYesMeasuresTextField" layoutX="26.0" layoutY="2853.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="28.0" layoutY="2925.0" prefHeight="60.0" prefWidth="825.0" text="a. If required, are you able to support students with any personal factors that may affect their placement? For example, this might include making reasonable adjustments for physical or mental health conditions or disabilities." wrapText="true" />
+                        <ChoiceBox fx:id="personalFactorsChoiceBox" layoutX="29.0" layoutY="2967.0" prefWidth="150.0" />
+                        <Label alignment="TOP_LEFT" layoutX="31.0" layoutY="3035.0" prefHeight="60.0" prefWidth="825.0" text="1. UK providers only: Does your organisation hold Public Liability Insurance or equivalent?Equivalent within the UK may refer to self-insurance or crown indemnity insurance (NHS). " wrapText="true" />
+                        <ChoiceBox fx:id="publicLiabilityInsChoiceBox" layoutX="30.0" layoutY="3074.0" prefWidth="150.0" />
+                        <Label layoutX="31.0" layoutY="3110.0" text="If yes, please confirm:" />
+                        <Label layoutX="31.0" layoutY="3134.0" text="a. Name of provider: " />
+                        <TextField fx:id="ifNoPublicLiabilityInsTextField" layoutX="28.0" layoutY="3277.0" prefHeight="26.0" prefWidth="341.0" />
+                        <TextField fx:id="insProvNameTextField" layoutX="29.0" layoutY="3155.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label layoutX="30.0" layoutY="3190.0" text="Expiry date: " />
+                        <DatePicker fx:id="insProvExpDateDatePicker" layoutX="29.0" layoutY="3213.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label layoutX="29.0" layoutY="3251.0" text="If no, what will happen if a member of the public makes a claim:" />
+                        <Label alignment="TOP_LEFT" layoutX="28.0" layoutY="3314.0" prefHeight="35.0" prefWidth="825.0" text="2. UK providers only: Does your organisation hold Employer’s Liability Insurance or equivalent? This is usually a legal requirement for employing a placement student – for more information see" wrapText="true" />
+                        <Hyperlink fx:id="provFormHyperlink1" layoutX="276.0" layoutY="3328.0" onAction="#goToProvUrl1" text="gov.uk" />
+                        <ChoiceBox fx:id="EmpLiabilityInsChoiceBox" layoutX="30.0" layoutY="3358.0" prefWidth="150.0" />
+                        <Label layoutX="31.0" layoutY="3394.0" text="If yes, please confirm:" />
+                        <Label layoutX="31.0" layoutY="3418.0" text="a. Name of provider: " />
+                        <TextField fx:id="insEmpProvNameTextField" layoutX="29.0" layoutY="3439.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label layoutX="30.0" layoutY="3474.0" text="Expiry date: " />
+                        <DatePicker fx:id="insEmpProvExpDateDatePicker" layoutX="29.0" layoutY="3497.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label layoutX="29.0" layoutY="3540.0" text="If no, what will happen if the placement student becomes ill or injured due to the work they complete on placement with you?" />
+                        <TextField fx:id="ifNoEmpLiabilityInsTextField" layoutX="28.0" layoutY="3557.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="21.0" layoutY="3594.0" prefHeight="35.0" prefWidth="825.0" text="3. UK providers only: Does your organisation hold Professional Indemnity Insurance or equivalent?This insurance is only applicable if during the placement a student may provide advice, designs, or professional services to the public or other businesses. " wrapText="true" />
+                        <ChoiceBox fx:id="IndemInsChoiceBox" layoutX="27.0" layoutY="3636.0" prefWidth="150.0" />
+                        <Label layoutX="29.0" layoutY="3667.0" text="If yes, please confirm:" />
+                        <Label layoutX="29.0" layoutY="3691.0" text="a. Name of provider: " />
+                        <TextField fx:id="IndemInsProvNameTextField" layoutX="27.0" layoutY="3712.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label layoutX="28.0" layoutY="3747.0" text="Expiry date: " />
+                        <DatePicker fx:id="IndemInsExpDateDatePicker" layoutX="27.0" layoutY="3770.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="3841.0" prefHeight="60.0" prefWidth="825.0" text="1. Non-UK providers only: Would your organisation’s insurances cover liability if your business is held responsible for injury or damage to a client, contractor, or member of the public?" wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="4050.0" prefHeight="60.0" prefWidth="825.0" text="2. Non-UK providers only: Would your organisation’s insurances cover liability arising from injury sustained by a student as a result of their duties in the role?" wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="23.0" layoutY="4258.0" prefHeight="60.0" prefWidth="825.0" text="3. Non-UK providers only: Would your organisation’s insurances cover any legal/compensation costs arising from the placement student’s advice or professional services?" wrapText="true" />
+                        <ChoiceBox fx:id="ins1ChoiceBox" layoutX="25.0" layoutY="3876.0" prefWidth="150.0" />
+                        <Label layoutX="28.0" layoutY="3908.0" text="If yes, please confirm:" />
+                        <Label layoutX="28.0" layoutY="3932.0" text="a. Name of provider: " />
+                        <TextField fx:id="ins1ProvNameTextField" layoutX="26.0" layoutY="3953.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label layoutX="27.0" layoutY="3983.0" text="Expiry date: " />
+                        <DatePicker fx:id="ins1ExpDateDatePicker" layoutX="26.0" layoutY="4006.0" prefHeight="26.0" prefWidth="341.0" />
+                        <ChoiceBox fx:id="ins2PChoiceBox" layoutX="25.0" layoutY="4088.0" prefWidth="150.0" />
+                        <Label layoutX="27.0" layoutY="4120.0" text="If yes, please confirm:" />
+                        <Label layoutX="27.0" layoutY="4144.0" text="a. Name of provider: " />
+                        <TextField fx:id="ins2ProvNameTextField" layoutX="25.0" layoutY="4165.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label layoutX="26.0" layoutY="4195.0" text="Expiry date: " />
+                        <DatePicker fx:id="ins2ExpDateDatePicker" layoutX="23.0" layoutY="4218.0" prefHeight="26.0" prefWidth="341.0" />
+                        <ChoiceBox fx:id="ins3PChoiceBox" layoutX="24.0" layoutY="4300.0" prefWidth="150.0" />
+                        <Label layoutX="24.0" layoutY="4332.0" text="If yes, please confirm:" />
+                        <Label layoutX="24.0" layoutY="4356.0" text="a. Name of provider: " />
+                        <TextField fx:id="ins3ProvNameTextField" layoutX="24.0" layoutY="4377.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label layoutX="24.0" layoutY="4407.0" text="Expiry date: " />
+                        <DatePicker fx:id="ins3ExpDateDatePicker" layoutX="22.0" layoutY="4430.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label layoutX="26.0" layoutY="4502.0" text="a. Does the organisation have a procedure for recording and reporting accidents/incidents?" />
+                        <Label layoutX="25.0" layoutY="4546.0" text="b. Does the organisation have a written health and safety policy?" />
+                        <Label layoutX="25.0" layoutY="4607.0" text="c. Does the organisation provide health and safety training for new employees?" />
+                        <ChoiceBox fx:id="accidentsReportChoiceBox" layoutX="24.0" layoutY="4519.0" prefWidth="150.0" />
+                        <ChoiceBox fx:id="writtenHandSpolicyChoiceBox" layoutX="24.0" layoutY="4569.0" prefWidth="150.0" />
+                        <ChoiceBox fx:id="hAndStrainingChoiceBox" layoutX="24.0" layoutY="4632.0" prefWidth="150.0" />
+                        <Label layoutX="21.0" layoutY="4699.0" text="a. Will staff from the University be able to undertake site visits during the placement as required in consultation with appropriate staff at your organisation? " />
+                        <ChoiceBox fx:id="siteVisitsChoiceBox" layoutX="20.0" layoutY="4716.0" prefWidth="150.0" />
+                        <Label layoutX="21.0" layoutY="4754.0" text="If No, please provide reasons:" />
+                        <TextField fx:id="ifNoSiteVisitsTextField" layoutX="20.0" layoutY="4771.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="19.0" layoutY="4804.0" prefHeight="40.0" prefWidth="825.0" text="b. Are there any issues relating to confidentiality or disclosure which the University will need to take into account in its procedures for assessing work undertaken by students on placement in your organisation?" wrapText="true" />
+                        <ChoiceBox fx:id="disclosureChoiceBox" layoutX="18.0" layoutY="4844.0" prefWidth="150.0" />
+                        <Label layoutX="19.0" layoutY="4882.0" text="If Yes, please provide details." />
+                        <TextField fx:id="ifYesDisclosureTextField" layoutX="18.0" layoutY="4899.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Button fx:id="submitButton" layoutX="17.0" layoutY="5263.0" mnemonicParsing="false" onAction="#submitButtonOnAction" prefHeight="26.0" prefWidth="113.0" styleClass="button2" stylesheets="@styles.css" text="Submit" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="5018.0" prefHeight="20.0" prefWidth="820.0" text="Name:" wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="5137.0" prefHeight="20.0" prefWidth="820.0" text="Digital signature:" wrapText="true" />
+                        <TextField fx:id="providerStaffJobTitleTextField" layoutX="13.0" layoutY="5100.0" prefHeight="26.0" prefWidth="341.0" />
+                        <DatePicker fx:id="dateDatePicker" layoutX="15.0" layoutY="5218.0" prefHeight="26.0" prefWidth="341.0" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="5193.0" prefHeight="20.0" prefWidth="820.0" text="Date:" wrapText="true" />
+                        <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="4977.0" prefHeight="51.0" prefWidth="820.0" text="By completing this form you have accepted the conditions and requirements set out in the Responsibilities of the Placement Provider on page one of this document. You also confirm all the information provided in this form is factually correct at the time of submitting. " wrapText="true" />
+                        <Label layoutX="13.0" layoutY="5075.0" text="Job Title:" />
+                        <TextField fx:id="providerStaffNameTextField" layoutX="13.0" layoutY="5038.0" prefHeight="26.0" prefWidth="341.0" />
+                        <TextField fx:id="providerStaffSignatureTextField" layoutX="13.0" layoutY="5157.0" prefHeight="26.0" prefWidth="341.0" />
+                        <ChoiceBox fx:id="organisationActivitiesChoiceBox" layoutX="33.0" layoutY="780.0" prefWidth="150.0" />
+                        <Label layoutX="35.0" layoutY="805.0" prefHeight="27.0" prefWidth="200.0" text="If yes, please provide details below:" />
+                        <Label fx:id="errorMessageLabel" layoutX="18.0" layoutY="5307.0" prefHeight="20.0" prefWidth="341.0" textFill="RED" />
+                        <Button fx:id="saveButton" layoutX="146.0" layoutY="5263.0" mnemonicParsing="false" onAction="#saveButtonOnAction" prefHeight="26.0" prefWidth="113.0" styleClass="button2" stylesheets="@styles.css" text="Save" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="16.0" layoutY="44.0" text="Please select a student*:" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="studentErrorMessageLabel" layoutX="17.0" layoutY="66.0" prefHeight="18.0" prefWidth="798.0" textFill="RED" />
+                        <Button fx:id="viewStudentFormButton" layoutX="310.0" layoutY="39.0" mnemonicParsing="false" onAction="#viewStudentFormOnAction" prefHeight="26.0" prefWidth="128.0" styleClass="button2" stylesheets="@styles.css" text="View Student Form" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="viewTutorFormButton" layoutX="445.0" layoutY="39.0" mnemonicParsing="false" onAction="#viewTutorFormOnAction" prefHeight="26.0" prefWidth="128.0" styleClass="button2" stylesheets="@styles.css" text="View Tutor Form" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <ComboBox fx:id="selectStudentComboBox" layoutX="154.0" layoutY="40.0" onAction="#selectStudentComboBoxOnAction" prefWidth="150.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

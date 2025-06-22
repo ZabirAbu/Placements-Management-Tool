@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.plcmttrkr.ViewProviderFormController">
+   <children>
+      <AnchorPane fx:id="dragBar" layoutX="175.0" onMouseDragged="#dragBarOnMovementAction" onMousePressed="#dragBarOnAction" prefHeight="25.0" prefWidth="345.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="cancelButton" layoutX="38.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="25.0" prefWidth="25.0" stylesheets="@styles.css" text="X" textFill="#0000007a" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="minimiseButton" layoutX="293.0" mnemonicParsing="false" onAction="#minimiseButtonOnAction" prefHeight="25.0" prefWidth="25.0" stylesheets="@styles.css" text="-" textFill="#0000007a" AnchorPane.rightAnchor="26.4" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Rockwell Extra Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="198.0" layoutY="4.0" text="Provider Form Viewer">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ScrollPane layoutX="7.0" layoutY="42.0" prefHeight="3000.0" prefWidth="520.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2874.0" prefWidth="520.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="40.0" text="1. Placement Provider Details">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="v1" layoutX="14.0" layoutY="60.0" text="Name of Organisation:" />
+                  <Label fx:id="v2" layoutX="15.0" layoutY="78.0" text="Address where the placement will be based:" />
+                  <Label fx:id="v4" layoutX="15.0" layoutY="114.0" text="Web Address:" />
+                  <Label fx:id="v7" layoutX="16.0" layoutY="258.0" text="Name of University of Leicester student:" />
+                  <Label fx:id="v25" alignment="TOP_LEFT" layoutX="16.0" layoutY="932.0" prefHeight="68.0" prefWidth="487.0" text="Students support:" wrapText="true" />
+                  <Label layoutX="16.0" layoutY="238.0" text="2. Placement Student">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="v8" layoutX="16.0" layoutY="317.0" text="Name of main contact:" />
+                  <Label fx:id="v9" layoutX="17.0" layoutY="335.0" text="Contact Job Title:" />
+                  <Label layoutX="15.0" layoutY="291.0" prefHeight="26.0" prefWidth="503.0" text="3. Placement Provider named contact for University and Placement Student" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="v12" layoutX="18.0" layoutY="427.0" text="Job Title:" />
+                  <Label fx:id="v15" layoutX="18.0" layoutY="481.0" text="Working hours per week:" />
+                  <Label layoutX="16.0" layoutY="407.0" text="4. Placement Role details">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="699.0" text="5. Work factors">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="v19" layoutX="16.0" layoutY="719.0" text="Student exposed to hazards:" />
+                  <Label fx:id="v21" layoutX="16.0" layoutY="811.0" text="Requires training for placement:" />
+                  <Label fx:id="v3" layoutX="14.0" layoutY="96.0" text="Postcode:" />
+                  <Label fx:id="v5" layoutX="15.0" layoutY="133.0" text="Activity in harmful areas:" />
+                  <Label fx:id="v6" alignment="TOP_LEFT" layoutX="15.0" layoutY="151.0" prefHeight="74.0" prefWidth="492.0" text="More information:" wrapText="true" />
+                  <Label fx:id="v10" layoutX="17.0" layoutY="353.0" text="Contact Email:" />
+                  <Label fx:id="v11" layoutX="17.0" layoutY="371.0" text="Contact Telephone Number:" />
+                  <Label fx:id="v13" layoutX="18.0" layoutY="445.0" text="Role Start Date:" />
+                  <Label fx:id="v14" layoutX="18.0" layoutY="463.0" text="Role End Date:" />
+                  <Label fx:id="v16" layoutX="19.0" layoutY="499.0" text="Probation period:" />
+                  <Label fx:id="v17" alignment="TOP_LEFT" layoutX="19.0" layoutY="517.0" prefHeight="67.0" prefWidth="490.0" text="Probation period information:" wrapText="true" />
+                  <Label fx:id="v18" alignment="TOP_LEFT" layoutX="19.0" layoutY="584.0" prefHeight="67.0" prefWidth="490.0" text="Student expectations:" wrapText="true" />
+                  <Label fx:id="v20" alignment="TOP_LEFT" layoutX="16.0" layoutY="737.0" prefHeight="67.0" prefWidth="490.0" text="More Information on hazards:" wrapText="true" />
+                  <Label fx:id="v22" alignment="TOP_LEFT" layoutX="16.0" layoutY="829.0" prefHeight="67.0" prefWidth="490.0" text="More Information on training:" wrapText="true" />
+                  <Label fx:id="v23" layoutX="16.0" layoutY="896.0" text="Working from home:" />
+                  <Label fx:id="v24" layoutX="17.0" layoutY="914.0" text="How frequently:" />
+                  <Label layoutX="18.0" layoutY="1020.0" text="6. Travel and transport factors">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="v26" layoutX="19.0" layoutY="1040.0" text="Different sites:" />
+                  <Label fx:id="v28" layoutX="19.0" layoutY="1132.0" text="Outside UK travel:" />
+                  <Label fx:id="v27" alignment="TOP_LEFT" layoutX="19.0" layoutY="1058.0" prefHeight="67.0" prefWidth="490.0" text="More Information on sites:" wrapText="true" />
+                  <Label layoutX="21.0" layoutY="1176.0" text="7. Location and regional factors">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="v29" layoutX="22.0" layoutY="1196.0" text="Main location present risks:" />
+                  <Label fx:id="v30" alignment="TOP_LEFT" layoutX="22.0" layoutY="1214.0" prefHeight="67.0" prefWidth="490.0" text="More Information on risks and prevention:" wrapText="true" />
+                  <Label layoutX="21.0" layoutY="1298.0" text="8. Health and environmental factors">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="v31" layoutX="22.0" layoutY="1318.0" text="Precautionary measures required:" />
+                  <Label fx:id="v32" alignment="TOP_LEFT" layoutX="22.0" layoutY="1336.0" prefHeight="67.0" prefWidth="490.0" text="More details on measures:" wrapText="true" />
+                  <Label layoutX="21.0" layoutY="1403.0" text="9. Personal factors">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="v33" layoutX="22.0" layoutY="1423.0" text="Support students with personal factors:" />
+                  <Label layoutX="21.0" layoutY="1479.0" text="10. Policies and Insurance (UK Providers Only)">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="v34" layoutX="22.0" layoutY="1499.0" text="Public Liability Insurance or equivalent:" />
+                  <Label layoutX="23.0" layoutY="1517.0" text="If yes:" />
+                  <Label fx:id="v35" layoutX="23.0" layoutY="1535.0" text="Name of provider:" />
+                  <Label fx:id="v36" layoutX="23.0" layoutY="1553.0" text="Expiry date:" />
+                  <Label layoutX="23.0" layoutY="1571.0" text="If no:" />
+                  <Label fx:id="v37" alignment="TOP_LEFT" layoutX="23.0" layoutY="1589.0" prefHeight="86.0" prefWidth="478.0" text="What will happen if a member of the public makes a claim:" wrapText="true" />
+                  <Label fx:id="v38" layoutX="22.0" layoutY="1675.0" text="Employer’s Liability Insurance or equivalent:" />
+                  <Label layoutX="23.0" layoutY="1693.0" text="If yes:" />
+                  <Label fx:id="v39" layoutX="23.0" layoutY="1711.0" text="Name of provider:" />
+                  <Label fx:id="v40" layoutX="23.0" layoutY="1729.0" text="Expiry date:" />
+                  <Label layoutX="23.0" layoutY="1747.0" text="If no:" />
+                  <Label fx:id="v41" alignment="TOP_LEFT" layoutX="23.0" layoutY="1765.0" prefHeight="86.0" prefWidth="478.0" text="What will happen if the placement student becomes ill or injured:" wrapText="true" />
+                  <Label fx:id="v42" alignment="TOP_LEFT" layoutX="22.0" layoutY="1851.0" prefHeight="50.0" prefWidth="482.0" text="Professional Indemnity Insurance or equivalent:" wrapText="true" />
+                  <Label layoutX="23.0" layoutY="1903.0" text="If yes:" />
+                  <Label fx:id="v43" layoutX="23.0" layoutY="1921.0" text="Name of provider:" />
+                  <Label fx:id="v44" layoutX="23.0" layoutY="1939.0" text="Expiry date:" />
+                  <Label layoutX="21.0" layoutY="1984.0" text="11. Policies and Insurance (Overseas Employers only)">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="v45" alignment="TOP_LEFT" layoutX="22.0" layoutY="2004.0" prefHeight="41.0" prefWidth="487.0" text="Would your organisation’s insurances cover liability if your business is held responsible for injury or damage to a client, contractor, or member of the public:" wrapText="true" />
+                  <Label layoutX="23.0" layoutY="2046.0" text="If yes:" />
+                  <Label fx:id="v46" layoutX="23.0" layoutY="2064.0" text="Name of provider:" />
+                  <Label fx:id="v47" layoutX="23.0" layoutY="2082.0" text="Expiry date:" />
+                  <Label layoutX="23.0" layoutY="2169.0" text="If yes:" />
+                  <Label fx:id="v49" layoutX="23.0" layoutY="2187.0" text="Name of provider:" />
+                  <Label fx:id="v50" layoutX="23.0" layoutY="2205.0" text="Expiry date:" />
+                  <Label fx:id="v48" alignment="TOP_LEFT" layoutX="23.0" layoutY="2127.0" prefHeight="41.0" prefWidth="487.0" text="Would your organisation’s insurances cover liability arising from injury sustained by a student as a result of their duties in the role:" wrapText="true" />
+                  <Label layoutX="18.0" layoutY="2314.0" text="If yes:" />
+                  <Label fx:id="v52" layoutX="18.0" layoutY="2332.0" text="Name of provider:" />
+                  <Label fx:id="v53" layoutX="18.0" layoutY="2350.0" text="Expiry date:" />
+                  <Label fx:id="v51" alignment="TOP_LEFT" layoutX="20.0" layoutY="2245.0" prefHeight="68.0" prefWidth="487.0" text="Would your organisation’s insurances cover any legal/compensation costs arising from the placement student’s advice or professional services:" wrapText="true" />
+                  <Label layoutX="19.0" layoutY="2392.0" text="12. Health and Safety">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="v54" layoutX="20.0" layoutY="2412.0" text="Procedure for recording and reporting accidents/incidents:" />
+                  <Label fx:id="v55" layoutX="21.0" layoutY="2430.0" text="Does the organisation have a written health and safety policy:" />
+                  <Label fx:id="v56" layoutX="21.0" layoutY="2448.0" text="Does the organisation provide health and safety training for new employees:" />
+                  <Label layoutX="22.0" layoutY="2487.0" text="13. University Access and Support">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="v57" alignment="TOP_LEFT" layoutX="23.0" layoutY="2507.0" prefHeight="41.0" prefWidth="483.0" text="Will staff from the University be able to undertake site visits during the placement as required in consultation with appropriate staff at your organisation:" wrapText="true" />
+                  <Label fx:id="v58" alignment="TOP_LEFT" layoutX="24.0" layoutY="2544.0" prefHeight="70.0" prefWidth="469.0" text="If no, reasoning:" wrapText="true" />
+                  <Label fx:id="v59" alignment="TOP_LEFT" layoutX="24.0" layoutY="2614.0" prefHeight="56.0" prefWidth="483.0" text="Are there any issues relating to confidentiality or disclosure which the University will need to take into account in its procedures for assessing work undertaken by students on placement in your organisation:" wrapText="true" />
+                  <Label fx:id="v60" alignment="TOP_LEFT" layoutX="24.0" layoutY="2670.0" prefHeight="70.0" prefWidth="469.0" text="If yes, details:" wrapText="true" />
+                  <Label fx:id="v61" layoutX="26.0" layoutY="2785.0" text="Name:" />
+                  <Label fx:id="v64" layoutX="26.0" layoutY="2839.0" text="Date:" />
+                  <Label layoutX="24.0" layoutY="2765.0" text="14. Declaration and Signature">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="v62" layoutX="26.0" layoutY="2803.0" text="Job Title:" />
+                  <Label fx:id="v63" layoutX="26.0" layoutY="2821.0" text="Signature:" />
+               </children></AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

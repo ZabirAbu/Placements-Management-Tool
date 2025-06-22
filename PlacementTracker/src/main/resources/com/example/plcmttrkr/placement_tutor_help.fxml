@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.plcmttrkr.PlacementTutorHelpController">
+    <children>
+        <AnchorPane fx:id="dragBar" layoutX="200.0" onMouseDragged="#dragBarOnMovementAction" onMousePressed="#dragBarOnAction" prefHeight="40.0" prefWidth="900.0">
+            <children>
+                <Button fx:id="minimiseButton" layoutX="820.0" mnemonicParsing="false" onAction="#minimiseButtonOnAction" prefHeight="40.0" prefWidth="40.0" stylesheets="@styles.css" text="-" textFill="#0000007a" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0">
+                    <font>
+                        <Font name="Rockwell Extra Bold" size="18.0" />
+                    </font>
+                </Button>
+                <Button fx:id="cancelButton" layoutX="860.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="40.0" prefWidth="40.0" stylesheets="@styles.css" text="X" textFill="#0000007a" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #7663FC;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="900.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button fx:id="logoutButton" layoutY="534.0" mnemonicParsing="false" onAction="#logoutButtonOnAction" prefHeight="40.0" prefWidth="200.0" styleClass="button2" stylesheets="@styles.css" text="Logout" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="75.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@logo_cropped.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="homeButton" layoutX="3.0" layoutY="176.0" mnemonicParsing="false" onAction="#homeButtonOnAction" prefHeight="40.0" prefWidth="200.0" styleClass="button2" stylesheets="@styles.css" text="Home" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="formButton" layoutX="3.0" layoutY="216.0" mnemonicParsing="false" onAction="#formButtonOnAction" prefHeight="40.0" prefWidth="200.0" styleClass="button2" stylesheets="@styles.css" text="Form" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button layoutY="256.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #4a31fb;" text="Help" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="210.0" layoutY="50.0" prefHeight="560.0" prefWidth="900.0">
+            <children>
+                <AnchorPane layoutX="19.0" prefHeight="349.0" prefWidth="855.0" style="-fx-background-color: #e8e8e8;" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label fx:id="accountTypeLabel" layoutX="23.0" layoutY="21.0" prefHeight="40.0" prefWidth="232.0" text="Help - Placement Tutor" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="21.0">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="24.0" layoutY="70.0" prefHeight="23.0" prefWidth="182.0" text="Submit Placement Tutor form " underline="true" />
+                        <Label layoutX="24.0" layoutY="93.0" prefHeight="23.0" prefWidth="359.0" text="1) Click the form tab on the left to acess the Placement Tutor form" />
+                        <Label layoutX="24.0" layoutY="116.0" prefHeight="23.0" prefWidth="266.0" text="2) Select a student for the assessment form" />
+                        <Label layoutX="24.0" layoutY="139.0" prefHeight="23.0" prefWidth="334.0" text="3) Fill in all necessary information in each field" />
+                        <Label layoutX="391.0" layoutY="70.0" prefHeight="23.0" prefWidth="182.0" text="Edit Placement Tutor form " underline="true" />
+                        <Label layoutX="391.0" layoutY="93.0" prefHeight="23.0" prefWidth="450.0" text="1) Click the form tab on the left to acess the Placement Tutor form you have " />
+                        <Label layoutX="391.0" layoutY="139.0" prefHeight="23.0" prefWidth="334.0" text="2) Edit which ever text fields you need to" />
+                        <Label layoutX="391.0" layoutY="163.0" prefHeight="23.0" prefWidth="350.0" text="3) Press the save button to save the changes made to the form " />
+                        <Label layoutX="391.0" layoutY="186.0" prefHeight="23.0" prefWidth="350.0" text="4) Press submit to resubmit the edited form" />
+                        <Label layoutX="24.0" layoutY="163.0" prefHeight="23.0" prefWidth="334.0" text="4) Press save to save your progress at any point" />
+                        <Label layoutX="24.0" layoutY="186.0" prefHeight="23.0" prefWidth="334.0" text="5) Press submit to send your application" />
+                        <Label layoutX="391.0" layoutY="116.0" prefHeight="23.0" prefWidth="450.0" text="    already filled out" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="19.0" layoutY="365.0" prefHeight="174.0" prefWidth="274.0" style="-fx-background-color: #e8e8e8;" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="19.0">
+                    <children>
+                        <Label layoutX="62.0" layoutY="14.0" text="Contact details" underline="true">
+                            <font>
+                                <Font size="18.0" />
+                            </font></Label>
+                        <Label layoutX="56.0" layoutY="61.0" text="Phone: 0116 252 2522" />
+                        <Label layoutX="52.0" layoutY="101.0" text="Email:  help@uol.le.ac.uk" />
+                    </children></AnchorPane>
+                <AnchorPane layoutX="325.0" layoutY="365.0" prefHeight="174.0" prefWidth="549.0" style="-fx-background-color: #e8e8e8;">
+                    <children>
+                        <Label layoutX="215.0" layoutY="14.0" text="Created by" underline="true">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="215.0" layoutY="37.0" text="Vaibhav J. Guela" />
+                        <Label layoutX="215.0" layoutY="71.0" text="Jakub J. Jankowski" />
+                        <Label layoutX="215.0" layoutY="54.0" prefHeight="17.0" prefWidth="70.0" text="Zabir Abu" />
+                        <Label layoutX="215.0" layoutY="88.0" text="Louis Gordon Doughton" />
+                        <Label layoutX="213.0" layoutY="105.0" text="Taher Murtuza" />
+                        <Label layoutX="215.0" layoutY="139.0" text="Luke K.E. Williamson" />
+                        <Label layoutX="215.0" layoutY="122.0" text="Dhruv K. Parmar" />
+                        <Label layoutX="215.0" layoutY="156.0" text="Rohan Kanani" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
